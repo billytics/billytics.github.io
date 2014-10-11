@@ -8,6 +8,7 @@
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="card/lib/css/card.css">
     <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,20 +17,15 @@
   </head>
   <body>
 <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <img src="img/logo.jpg" height="40px" width="80px" style="border-radius: 5px; margin-top:5px;">
-    </div>
-    <div class="navbar-collapse collapse" id="navbar-collapsible">
+      <ul class="nav navbar-nav navbar-left" style="margin-left:10px;">
+        <img src="css/images/logo.png" height="50px" width="150px" style="border-radius: 5px; margin-top:5px;">
+      </ul>
       <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
-        <li class="dropdown navbar-right">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log in<b class="caret"></b></a>
+        <div class="dropdown">
+          <button class="btn btn-default navbar-btn btn-outline dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Log In
+            <span class="caret"></span>
+          </button>
           <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
             <li>
               <div class="row">
@@ -44,27 +40,27 @@
                       <label class="sr-only" for="exampleInputPassword2">Password</label>
                       <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                     </div>
-
                     <div class="form-group">
-                      <button type="submit" class="btn btn-success btn-block">Sign up</button>
+                      <button type="submit" class="btn btn-success btn-block">Sign in</button>
                     </div>
                   </form>
                 </div>
               </div>
             </li>
           </ul>
-        </li>
-        <li><button type="button" class="btn btn-dafuault" data-toggle-"modal" data-target="#ticketmodal" href="#section2">Sign up!</a></li>
+        </div>
         <li>&nbsp;</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+        <li>
+        <button type="button" class="btn btn-default navbar-btn btn-outline" data-toggle="modal" data-target="#ticketmodal">Sign up!</button>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
 <section class="container-fluid" id="section1">
-    <h1 class="text-center v-center">Billify</h1>
+    <h1 class="text-center v-center">Take back your data!</h1>
     <div class="row">
       <br>
       <div class="col-sm-4">
@@ -85,11 +81,40 @@
     </div>
 </section>
 
+<div class="modal fade" id="ticketmodal" tabindex="-1" role="dialog" aria-labelledby="ticketmodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign Up Page</h4>
+      </div>
+      <div class="modal-body">
+        <div class="demo-container">
+          <div class="card-wrapper"></div>
 
+          <div class="form-container active">
+              <form action="">
+                  <input placeholder="Card number" type="text" name="number">
+                  <input placeholder="Full name" type="text" name="name">
+                  <input placeholder="MM/YY" type="text" name="expiry">
+                  <input placeholder="CVC" type="text" name="cvc">
+              </form>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- script references -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/homepage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="card/lib/js/card.js"></script>
   </body>
 </html>
