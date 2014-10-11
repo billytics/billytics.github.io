@@ -14,11 +14,11 @@ $(".openpanel3").on("click", function() {
     $("#panel3").collapse('show');
 });
 
+
 /* ensure any open panels are closed before showing selected */
 $('#accordion').on('show.bs.collapse', function () {
     $('#accordion .in').collapse('hide');
 });
-
 /* smooth scrolling sections */
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
