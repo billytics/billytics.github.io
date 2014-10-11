@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
 
-    console.log("aslkdjfalksjdf");
     var pckry;
 
     var $container = $('.packery-container');
@@ -22,9 +21,15 @@ $(document).ready(function () {
 
     pckry = $container.data('packery');
 
-    console.log("asdf");
+
+
 
 
 
 })
 
+function modalReceipt() {
+    $('#item').each(function() {
+
+    });
+}
