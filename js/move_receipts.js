@@ -2,6 +2,27 @@
 
 $(document).ready(function () {
 
+  jQuery.getJSON( "receipt_data/dashboard_receipt_data.json", function( data ) {
+      $('#receiptContainer').append('<div id="items" class="packery-container" style="clear: both" row=""></div>');
+
+      $.each( data, function( index, element ) {
+        // console.log(element);
+        var template = $("#receiptTemplate").html()
+        // console.log(template)
+        var compiled = _.template(template)
+        $('#items').append(compiled(element));
+      });
+     
+      packery();
+  });
+    
+    
+    
+
+
+})
+
+function packery() {
     var pckry;
 
     var $container = $('.packery-container');
@@ -20,16 +41,10 @@ $(document).ready(function () {
     $container.packery( 'bindUIDraggableEvents', $itemElems );
 
     pckry = $container.data('packery');
-
-
-
-
-
-
-})
-
-function modalReceipt() {
-    $('#item').each(function() {
-
-    });
 }
+
+// function modalReceipt() {
+//     $('#item').each(function() {
+
+//     });
+// }
