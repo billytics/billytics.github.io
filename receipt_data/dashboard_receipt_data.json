@@ -1,22 +1,95 @@
-{
-    "glossary": {
-        "title": "example glossary",
-        "GlossDiv": {
-            "title": "S",
-            "GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-                    "SortAs": "SGML",
-                    "GlossTerm": "Standard Generalized Markup Language",
-                    "Acronym": "SGML",
-                    "Abbrev": "ISO 8879:1986",
-                    "GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-                        "GlossSeeAlso": ["GML", "XML"]
-                    },
-                    "GlossSee": "markup"
-                }
-            }
-        }
+[
+    {
+        "receipt_id": 1,
+        "timestamp": "Oct.11,2014 10:39a.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "Walmart",
+        "Address": "555 W. 42nd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "11377",
+        "Items": [{
+                "title": "milk",
+                "price": 3.05
+            },
+            {
+                "title": "something",
+                "price": 3
+
+            }],
+        "Subtotal": 6.05,
+        "Tax": 1,
+        "Total": 7.05
+    },
+    {
+        "receipt_id": 2,
+        "timestamp": "2014-10-12 14:00:00",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "Walmart",
+        "Address": "555 W. 42nd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "11377",
+        "Items": [{
+                "title": "milk",
+                "price": 3.05
+            },
+            {
+                "title": "something",
+                "price": 3
+
+            }],
+        "Subtotal": 6.05,
+        "Tax": 1,
+        "Total": 7.05
+    },
+    {
+        "receipt_id": 3,
+        "timestamp": "2014-10-12 14:00:00",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "Walmart",
+        "Address": "555 W. 42nd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "11377",
+        "Items": [{
+                "title": "milk",
+                "price": 3.05
+            },
+            {
+                "title": "something",
+                "price": 3
+
+            }],
+        "Subtotal": 6.05,
+        "Tax": 1,
+        "Total": 7.05
+    },
+    {
+        "receipt_id": 4,
+        "timestamp": "2014-10-12 14:00:00",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "Walmart",
+        "Address": "555 W. 42nd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "11377",
+        "Items": [{
+                "title": "milk",
+                "price": 3.05
+            },
+            {
+                "title": "something",
+                "price": 3
+
+            }],
+        "Subtotal": 6.05,
+        "Tax": 1,
+        "Total": 7.05
     }
-}
+
+]
