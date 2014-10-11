@@ -51,9 +51,7 @@ function modalReceipt(data) {
         var id = $(this).attr('row');
 
         var object = _.findWhere(data, {'receipt_id': id|0});
-        $('receiptModal .modal-title').html('');
-        console.log(object.Merchant);
-        $('receiptModal .modal-title').html(object.Merchant);
+        $('#receiptModal .modal-title').html(object.Merchant);
         $('#receiptModal').modal('show');
     })
 }
