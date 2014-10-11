@@ -31,10 +31,10 @@
 
         <div class="container" id="receiptContainer">
             <script type="text/template" id="receiptTemplate">
-                <div class="item" row="">
+                <div class="item" row="<%- receipt_id %>">
                 <div id="editNav" class="">
 
-                  <button type="button" class="btn btn-default glyphicon glyphicon-collapse-up" style="float: right; font-size: 20px" data-toggle="modal" data-target="#receiptModal"></button>
+                  <button type="button" class="btn btn-default glyphicon glyphicon-collapse-up receiptModalButton" style="float: right; font-size: 20px" row="<%- receipt_id %>"></button>
                 </div>
               
                   <div class="item-content" style="padding-top: 0px">
@@ -42,7 +42,7 @@
                       <h3><%- Merchant %></h3>
                       <ul>  
                         <% _.each(Items, function(item) { %>
-                            <li><%- item.title %></li>
+                            <li><%- item.title %> , <%- item.price %></li>
                         <% }) %>
                       </ul>
                     </div>

@@ -14,6 +14,7 @@ $(document).ready(function () {
       });
      
       packery();
+      modalReceipt(data);
   });
     
     
@@ -27,9 +28,9 @@ function packery() {
 
     var $container = $('.packery-container');
     $container.packery({
-        columnWidth: 300,
-        rowHeight: 150,
-        gutter: 5
+        columnWidth: 330,
+        rowHeight: 100,
+        gutter: 2
     });
     // get item elements, jQuery-ify them
     var $itemElems = $( $container.packery('getItemElements') );
@@ -43,8 +44,16 @@ function packery() {
     pckry = $container.data('packery');
 }
 
-// function modalReceipt() {
-//     $('#item').each(function() {
+function modalReceipt(data) {
+    $('.receiptModalButton').on('click',function() {
+        // $('#receiptModal .modal-title').html('');
+        // $('#receiptModal .modal-title').
+        var id = $(this).attr('row');
 
-//     });
-// }
+        var object = _.findWhere(data, {'receipt_id': id|0});
+        $('receiptModal .modal-title').html('');
+        console.log(object.Merchant);
+        $('receiptModal .modal-title').html(object.Merchant);
+        $('#receiptModal').modal('show');
+    })
+}
