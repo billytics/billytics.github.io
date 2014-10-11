@@ -108,7 +108,7 @@ li a {
     margin-top: 10px;
 }
 
-#items .item .meta span {
+#items .item .meta {
     font-size: 12px !important;
     line-height: 16px !important;
     margin-right: 5px;
