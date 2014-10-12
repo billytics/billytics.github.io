@@ -118,16 +118,55 @@ li a {
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     background: linear-gradient(to bottom, #F6F6F6 0%, #EAEAEA 100%) repeat scroll 0 0 transparent;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 4px 1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px 30px;
     text-shadow: 0 1px 0 #DDDDDD;
     width: 270px;
     margin: 10px;
     float: left;
+    position: relative;
+    cursor: pointer;
 }
 
 #items .item .item-content {
   padding: 10px;
+}
+
+#items .editNav {
+  display: block;
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: white;
+  overflow: hidden;
+}
+
+
+#items .editNav .border {
+  top: 3px;
+  left: 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+#items .editNav .inner {
+  transform: rotate(-45deg);
+  display: block;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #ccc;
+  background: #ddd;
+  position: absolute;
+  top: 15px;
+  left: -30px;
 }
 
 #items .item .picture .description {
