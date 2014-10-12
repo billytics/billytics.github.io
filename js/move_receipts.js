@@ -58,12 +58,12 @@ function receiptSortType() {
         if ($(this).hasClass('btn-primary')) {
             // sort descending
             isotope(false);
-            $(this).html('<span class="glyphicon glyphicon-chevron-down">Descending Sort</span>');
+            $(this).html('<span class="glyphicon glyphicon-chevron-down">Descending Order</span>');
         }
         else {
             // sort ascending
             isotope(true);
-            $(this).html('<span class="glyphicon glyphicon-chevron-up">Ascending Sort</span>');
+            $(this).html('<span class="glyphicon glyphicon-chevron-up">Ascending Order</span>');
         }
 
         var data_sort = $('.btn-group > .btn.active').attr('data-sort-by');
@@ -125,4 +125,15 @@ function modalReceipt(data) {
 
         $('#receiptModal').modal('show');
     })
+}
+
+
+function recommendations() {
+    var recs = $('#recommendations')
+    if (recs.css('display') == 'none') {
+        recs.fadeIn( "slow", function() {});   
+    }
+    else {
+        recs.fadeOut(450, function(){});
+    }
 }
