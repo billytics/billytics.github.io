@@ -168,10 +168,10 @@ li a {
 
 #items .element-item:hover {
   background: #fafafa;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 #items .element-item .merchant {
-  color: #79BD8F;
   font-weight: bold;
 }
 
