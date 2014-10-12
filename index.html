@@ -94,22 +94,39 @@
         <h4 class="modal-title" id="myModalLabel">Sign Up Page</h4>
       </div>
       <div class="modal-body">
-        <div class="demo-container">
+        <div class="sign-up-container">
           <div class="form-container active info row">
               <form action="">
-                  <input class="MerchantID "placeholder="Merchant ID" type="text" name="merchantId">
-                  <input placeholder="Transaction ID (Optional)" type="text" name="transactionID">
-                  <input class="Referral ID" placeholder="Referrel ID (Optional)" type="text" name="referrelID">
-                  <span><div class="card">
-                    <div class="card-wrapper"></div>
+                <div class="card-related">
+                  <div class="paymentinfo pull-right">
+                    <div class="form-group">
+                      <input class="form-control" placeholder="Card number" type="text" name="number">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" placeholder="Full name" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" placeholder="MM/YY" type="text" name="expiry">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" placeholder="CVC" type="text" name="cvc">
+                    </div>
                   </div>
-                  <div class="paymentinfo">
-                    <input placeholder="Card number" type="text" name="number">
-                    <input placeholder="Full name" type="text" name="name">
-                    <input placeholder="MM/YY" type="text" name="expiry">
-                    <input placeholder="CVC" type="text" name="cvc">
+                  <div class="card-container">
+                    <div class="card">
+                      <div class="card-wrapper"></div>
+                    </div>
                   </div>
-                  </span>
+                </div>
+                <div class="form-group">
+                  <input class="MerchantID form-control"placeholder="Merchant ID" type="text" name="merchantId">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Transaction ID (Optional)" type="text" name="transactionID">
+                </div>
+                <div class="form-group">
+                  <input class="ReferralID form-control" placeholder="Referrel ID (Optional)" type="text" name="referrelID">
+                </div>
               </form>
           </div>
       </div>
