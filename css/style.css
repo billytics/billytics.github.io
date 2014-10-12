@@ -1,3 +1,17 @@
+.homepageimage {
+  border-radius:50% 50% 50% 50%;  
+  width:300px;
+  height:250px;
+  border: 2px solid white;
+}
+.card-wrapper {
+  display:inline-block;
+}
+.tier {
+  width:150px;
+  height:150px;
+  border: 2px solid white;
+}
 html, body {
   height: 100%;
   font-family: "Helvetica", serif;
@@ -193,7 +207,7 @@ li a {
     width: 100%;
 }
 
-#items .item .picture img {
+#items .item .picture {
     border-radius: 2px 2px 0px 0px;
     height: auto;
     position: relative;
@@ -224,6 +238,7 @@ li a {
     position: relative;
     top: auto;
 }
+
 .navbar .submenu-show:before
 {
     border-bottom: 7px solid transparent;
