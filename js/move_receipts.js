@@ -58,12 +58,12 @@ function receiptSortType() {
         if ($(this).hasClass('btn-primary')) {
             // sort descending
             isotope(false);
-            $(this).html('<span class="glyphicon glyphicon-chevron-down">Descending Sort</span>');
+            $(this).html('<span class="glyphicon glyphicon-chevron-down">Descending Order</span>');
         }
         else {
             // sort ascending
             isotope(true);
-            $(this).html('<span class="glyphicon glyphicon-chevron-up">Ascending Sort</span>');
+            $(this).html('<span class="glyphicon glyphicon-chevron-up">Ascending Order</span>');
         }
 
         var data_sort = $('.btn-group > .btn.active').attr('data-sort-by');
@@ -112,6 +112,28 @@ function modalReceipt(data) {
 
         var object = _.findWhere(data, {'receipt_id': id|0});
         $('#receiptModal .modal-title').html(object.Merchant);
+        $('#receiptModal .modal-body #merchant').html(object.Merchant);
+        $('#receiptModal .modal-body #address').html(object.Address+"<br>"+object.City+","+object.State+" "+object.zip);
+        $('#receiptModal .modal-body #date').html(object.timestamp);
+        $('#receiptModal .modal-body #itemized').html('');
+        $(object.Items).each(function() {
+            $('#receiptModal .modal-body #itemized').append("1 "+this.title+":    "+'<span style="float:right; padding-right:10px">&#36; '+this.price+"</span><br>");
+        })
+        $('#receiptModal .modal-body #subtotal').html('<span style="margin-left:-4px;">Subtotal:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Subtotal+"</span><br>");
+        $('#receiptModal .modal-body #tax').html('<span style="margin-left:-4px">Tax:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Tax+"</span><br>");
+        $('#receiptModal .modal-body #total').html('<span style="margin-left:-4px">Total:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Total+"</span><br>");
+
         $('#receiptModal').modal('show');
     })
+}
+
+
+function recommendations() {
+    var recs = $('#recommendations')
+    if (recs.css('display') == 'none') {
+        recs.fadeIn( "slow", function() {});   
+    }
+    else {
+        recs.fadeOut(450, function(){});
+    }
 }

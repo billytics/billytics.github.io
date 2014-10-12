@@ -129,6 +129,22 @@
           <button class="btn btn-default" data-sort-by="cardType">Card Type</button>
         </div>
         <button id="receiptSortType" class="btn btn-primary" style="float:right; margin-right:40px"><span class="glyphicon glyphicon-chevron-up">Ascending Order</span></button>
+        <button href="javascript:;" onclick="recommendations()" id="recommendationButton" class="btn btn-warning" style="float:right; margin-right:40px"><span class="glyphicon glyphicon glyphicon-th-list">Recommendations</span></button>
+        <div id="recommendations" class="row" style="display:">
+          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>Have only 2 coffees today instead of 3!</strong> Save about $110 per month
+          </div>
+          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>Try to cut down on frozen foods from Fairways.</strong><br>You could save $35 per week on fresh produce.
+          </div>
+          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+          </div>
+        </div>
+
             <div id="items" class="isotope" style="clear: both" row="">
             <script type="text/template" id="receiptTemplate">
                 <div class="element-item" row="<%- receipt_id %>">
@@ -142,7 +158,7 @@
                       <h3 class="merchant"><%- Merchant %></h3>
                       <ul>  
                         <% _.each(Items, function(item) { %>
-                            <li><%- item.title %> , $<%- item.price %></li>
+                            <div id="itemized_pin"><span style=""><%- item.title %>:</span> <span style="float:right"> $<%- item.price %></span></div>
                         <% }) %>
                       </ul>
                         Total Price: &#36;<p class="total" style="display: inline"><%- Total %></p>
@@ -183,16 +199,31 @@
     <script src="js/move_receipts.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
 
-<!-- Modal -->
-<div class="modal fade" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<!-- Receipt Modal -->
+<div class="modal fade bs-example-modal-sm" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        
+        <div id="fakeReceipt">
+          <div id="merchant">
+          </div>
+          <div id="address">
+          </div>
+          <div id="date">
+          </div>
+          <div id="itemized">
+          </div>
+          <div id="subtotal">
+          </div>
+          <div id="tax">
+          </div>
+          <div id="total">
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

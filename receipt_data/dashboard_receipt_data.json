@@ -8,8 +8,8 @@
         "Address": "524 E. 15th St",
         "City": "NY",
         "State": "NY",
-        "zip": "11377",
-        "tag": "groceries",
+        "zip": "10009",
+        "tag": "clothes",
         "Items": [{
                 "title": "Dior Dress",
                 "price": 15
@@ -28,7 +28,7 @@
         "timestamp": "Oct.10,2014 11:41a.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "Mastercard",
-        "Merchant": "Walmart",
+        "Merchant": "Fairways",
         "Address": "555 W. 42nd St",
         "City": "NY",
         "State": "NY",
@@ -39,43 +39,110 @@
                 "price": 3.05
             },
             {
-                "title": "something",
+                "title": "Gruyere",
                 "price": 3
 
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 8
+        "Total": 7.05
     },
     {
         "receipt_id": 3,
         "timestamp": "Oct.10,2014 12:39p.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
-        "Merchant": "Walmart",
+        "Merchant": "Fairways",
         "Address": "555 W. 42nd St",
         "City": "NY",
         "State": "NY",
         "zip": "11377",
         "tag": "groceries",
         "Items": [{
-                "title": "milk",
-                "price": 3.05
+                "title": "turkey",
+                "price": 37
             },
             {
-                "title": "something",
-                "price": 3
+                "title": "gravy",
+                "price": 12.99
 
             }],
-        "Subtotal": 6.05,
-        "Tax": 1,
-        "Total": 9
+        "Subtotal": 39.99,
+        "Tax": 1.01,
+        "Total": 41
     },
     {
         "receipt_id": 4,
         "timestamp": "Oct.11,2014 13:24p.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
+        "Merchant": "Bob's Breads",
+        "Address": "555 W. 137th St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "10093",
+        "tag": "food",
+        "Items": [{
+                "title": "Turkey BLT",
+                "price": 12
+            }],
+        "Subtotal": 12,
+        "Tax": 1.09,
+        "Total": 13.09
+    },
+    {
+        "receipt_id": 5,
+        "timestamp": "Oct.11,2014 15:22p.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "ABC Bananas",
+        "Address": "555 E. 3rd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "10009",
+        "tag": "groceries",
+        "Items": [{
+                "title": "Bananas",
+                "price": 4.09
+            },
+            {
+                "title": "Bread",
+                "price": 2
+
+            }],
+        "Subtotal": 6.09,
+        "Tax": 1,
+        "Total": 7.09
+    },
+    {
+        "receipt_id": 6,
+        "timestamp": "Oct.11,2014 17:34p.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "AMEX",
+        "Merchant": "APC",
+        "Address": "92 W. 3rd St",
+        "City": "NY",
+        "State": "NY",
+        "zip": "10008",
+        "tag": "clothing",
+        "Items": [{
+                "title": "Hat",
+                "price": 540
+            },
+            {
+                "title": "Raw Denim",
+                "price": 370
+
+            }],
+        "Subtotal": 910,
+        "Tax": 100,
+        "Total": 1010
+    },
+    {
+        "receipt_id": 7,
+        "timestamp": "Oct.11,2014 18:19p.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "Mastercard",
         "Merchant": "Walmart",
         "Address": "555 W. 42nd St",
         "City": "NY",
@@ -83,17 +150,59 @@
         "zip": "11377",
         "tag": "groceries",
         "Items": [{
-                "title": "milk",
+                "title": "cucumbers",
                 "price": 3.05
             },
             {
-                "title": "something",
+                "title": "cheese curds",
                 "price": 3
 
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 1
-    }
+        "Total": 7.05
+    },
+    {
+        "receipt_id": 8,
+        "timestamp": "Oct.12,2014 12:24a.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "VISA",
+        "Merchant": "Fintech Hackathon",
+        "Address": "111 8th Ave",
+        "City": "NY",
+        "State": "NY",
+        "zip": "10009",
+        "tag": "food",
+        "Items": [{
+                "title": "Lasagna",
+                "price": 2000
+            },
+            {
+                "title": "Everything Else",
+                "price": 7000
 
+            }],
+        "Subtotal": 9000,
+        "Tax": 0,
+        "Total": 9000
+    },
+    {
+        "receipt_id": 9,
+        "timestamp": "Oct.12,2014 01:24a.m.",
+        "cardNum": "XXXX-XXXX-XXXX",
+        "cardType": "Mastercard",
+        "Merchant": "Fintech Hackathon",
+        "Address": "111 8th Ave.",
+        "City": "NY",
+        "State": "NY",
+        "zip": "10678",
+        "tag": "sleep",
+        "Items": [{
+                "title": "Sleep",
+                "price": 0
+            }],
+        "Subtotal": 0,
+        "Tax": 0,
+        "Total": 0
+    }
 ]
