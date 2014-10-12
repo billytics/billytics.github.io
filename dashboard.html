@@ -143,11 +143,14 @@
 
 
         <h2>Sort</h2>
-        <div id="sorts" class="btn-group">  <button class="btn btn-default is-checked" data-sort-by="original-order">Date</button>
+        <div id="sorts" class="btn-group">  
+        <button class="btn btn-default active" data-sort-by="original-order">Date</button>
           <button class="btn btn-default" data-sort-by="merchant">Merchant</button>
           <button class="btn btn-default" data-sort-by="total">Price</button>
           <button class="btn btn-default" data-sort-by="cardType">Card Type</button>
         </div>
+
+        <button id="receiptSortType" class="btn btn-primary" style="float:right; margin-right:40px"><span class="glyphicon glyphicon-chevron-up">Ascending Sort</span></button>
 
 
 
@@ -165,10 +168,10 @@
                       <h3 class="merchant"><%- Merchant %></h3>
                       <ul>  
                         <% _.each(Items, function(item) { %>
-                            <li><%- item.title %> , <%- item.price %></li>
+                            <li><%- item.title %> , $<%- item.price %></li>
                         <% }) %>
                       </ul>
-                        <p class="total"><%- Total %></p>
+                        Total Price: <p class="total" style="display: inline"><%- Total %></p>
 
                     </div>
 
@@ -178,7 +181,7 @@
                         <i class="glyphicon glyphicon-user">Baruch</i>
                         <a href=""></a>
                         <br>
-                        <i class="glyphicon glyphicon-tag">stuff</i>
+                        <i class="glyphicon glyphicon-tag"><%- tag %></i>
                         <i class="glyphicon glyphicon-tag cardType"><%- cardType %></i>
 
 

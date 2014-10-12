@@ -1,7 +1,7 @@
 [
     {
         "receipt_id": 1,
-        "timestamp": "Oct.11,2014 10:39a.m.",
+        "timestamp": "Oct.10,2014 10:39a.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
         "Merchant": "ass",
@@ -9,22 +9,23 @@
         "City": "NY",
         "State": "NY",
         "zip": "11377",
+        "tag": "groceries",
         "Items": [{
                 "title": "milk",
                 "price": 3.05
             },
             {
-                "title": "something",
+                "title": "cheese",
                 "price": 3
 
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 7
+        "Total": 7.10
     },
     {
         "receipt_id": 2,
-        "timestamp": "2014-10-12 14:00:00",
+        "timestamp": "Oct.10,2014 11:41a.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "Mastercard",
         "Merchant": "Walmart",
@@ -32,6 +33,7 @@
         "City": "NY",
         "State": "NY",
         "zip": "11377",
+        "tag": "groceries",
         "Items": [{
                 "title": "milk",
                 "price": 3.05
@@ -47,7 +49,7 @@
     },
     {
         "receipt_id": 3,
-        "timestamp": "2014-10-12 14:00:00",
+        "timestamp": "Oct.10,2014 12:39p.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
         "Merchant": "Walmart",
@@ -55,6 +57,7 @@
         "City": "NY",
         "State": "NY",
         "zip": "11377",
+        "tag": "groceries",
         "Items": [{
                 "title": "milk",
                 "price": 3.05
@@ -70,7 +73,7 @@
     },
     {
         "receipt_id": 4,
-        "timestamp": "2014-10-12 14:00:00",
+        "timestamp": "Oct.11,2014 13:24p.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
         "Merchant": "Walmart",
@@ -78,6 +81,7 @@
         "City": "NY",
         "State": "NY",
         "zip": "11377",
+        "tag": "groceries",
         "Items": [{
                 "title": "milk",
                 "price": 3.05

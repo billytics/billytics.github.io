@@ -47,10 +47,10 @@
                       <h3 class="merchant"><%- Merchant %></h3>
                       <ul>  
                         <% _.each(Items, function(item) { %>
-                            <li><%- item.title %> , <%- item.price %></li>
+                            <li><%- item.title %> , $<%- item.price %></li>
                         <% }) %>
                       </ul>
-                        <p class="total"><%- Total %></p>
+                        Total Price: <p class="total" style="display: inline"><%- Total %></p>
 
                     </div>
 
@@ -60,7 +60,7 @@
                         <i class="glyphicon glyphicon-user">Baruch</i>
                         <a href=""></a>
                         <br>
-                        <i class="glyphicon glyphicon-tag">stuff</i>
+                        <i class="glyphicon glyphicon-tag"><%- tag %></i>
                         <i class="glyphicon glyphicon-tag cardType"><%- cardType %></i>
 
 

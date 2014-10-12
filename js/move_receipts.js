@@ -15,17 +15,19 @@ $(document).ready(function () {
       // packery();
       modalReceipt(data);
       isotope();
-      
+      receiptSortType();
+      sortGroup();
   });
 
 })
 
-function isotope() {
+function isotope(sort) {
+    sort = typeof sort !== 'undefined' ? sort : true;
 
     var $container = $('.isotope');
     $container.isotope({
         layoutMode:'fitRows',
-        sortAscending: true,
+        sortAscending: sort,
         transformsEnabled: false,
         itemSelector: '.element-item',
         sortBy: 'original-order',
@@ -51,6 +53,34 @@ function isotope() {
 
 }
 
+function receiptSortType() {
+    $('#receiptSortType').on('click', function() {
+        if ($(this).hasClass('btn-primary')) {
+            // sort descending
+            isotope(false);
+            $(this).html('<span class="glyphicon glyphicon-chevron-down">Descending Sort</span>');
+        }
+        else {
+            // sort ascending
+            isotope(true);
+            $(this).html('<span class="glyphicon glyphicon-chevron-up">Ascending Sort</span>');
+        }
+
+        var data_sort = $('.btn-group > .btn.active').attr('data-sort-by');
+        $('.isotope').isotope({ sortBy: data_sort });
+
+        $(this).toggleClass('btn-primary');
+        $(this).toggleClass('btn-danger');
+
+    })
+} 
+
+function sortGroup() {
+    $(".btn-group > .btn").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+}
+
 function packery() {
     var pckry;
 
@@ -61,7 +91,7 @@ function packery() {
         gutter: 2
     });
     // get item elements, jQuery-ify them
-    var $itemElems = $( $container.packery('getItemElements') );
+    var $itemElems = $( $container.packery('getItemElements'));
 
     // make item elements draggable
     $itemElems.draggable();
