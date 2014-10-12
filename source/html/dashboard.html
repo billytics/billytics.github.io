@@ -32,10 +32,11 @@
 
         include "sort_bar.html"
 
+
         <div class="container" id="receiptContainer">
+            <div id="items" class="isotope" style="clear: both" row="">
             <script type="text/template" id="receiptTemplate">
-                <div class="item" row="<%- receipt_id %>">
-                <p class="trial"><%- Total %></p>
+                <div class="element-item" row="<%- receipt_id %>">
                 <div id="editNav" class="">
 
                   <button type="button" class="btn btn-default glyphicon glyphicon-collapse-up receiptModalButton" style="float: right; font-size: 20px" row="<%- receipt_id %>"></button>
@@ -44,12 +45,13 @@
                   <div class="item-content" style="padding-top: 0px">
                     <div class="description">
                       <h3 class="merchant"><%- Merchant %></h3>
-                      <p class="total"><%- Total %></p>
                       <ul>  
                         <% _.each(Items, function(item) { %>
                             <li><%- item.title %> , <%- item.price %></li>
                         <% }) %>
                       </ul>
+                        <p class="total"><%- Total %></p>
+
                     </div>
 
                     <div class="meta">
@@ -67,6 +69,7 @@
                   </div>
               </div>
             </script>
+            </div>
         </div>
     </div>
 
