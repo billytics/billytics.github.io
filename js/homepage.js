@@ -1,8 +1,7 @@
 $(document).ready(function(){/* activate scrollspy menu */
-$('body').scrollspy({
-  target: '#navbar-collapsible',
-  offset: 50
-});
+$('.active form').card({
+  container: $('.card-wrapper')
+})
 
 $(".openpanel").on("click", function() {
     $("#panel1").collapse('show');

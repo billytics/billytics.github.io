@@ -1,8 +1,4 @@
 $(document).ready(function(){/* activate scrollspy menu */
-$('body').scrollspy({
-  target: '#navbar-collapsible',
-  offset: 50
-});
 
 /* smooth scrolling sections */
 $('a[href*=#]:not([href=#])').click(function() {
