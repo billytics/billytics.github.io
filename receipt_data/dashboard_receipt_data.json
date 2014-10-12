@@ -20,7 +20,7 @@
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 7.05
+        "Total": 7
     },
     {
         "receipt_id": 2,
@@ -43,7 +43,7 @@
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 7.05
+        "Total": 8
     },
     {
         "receipt_id": 3,
@@ -66,7 +66,7 @@
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 7.05
+        "Total": 9
     },
     {
         "receipt_id": 4,
@@ -89,7 +89,7 @@
             }],
         "Subtotal": 6.05,
         "Tax": 1,
-        "Total": 7.05
+        "Total": 10
     }
 
 ]

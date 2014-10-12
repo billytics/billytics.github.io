@@ -29,9 +29,13 @@
 
         include "navbar.html"
 
+
+        include "sort_bar.html"
+
         <div class="container" id="receiptContainer">
             <script type="text/template" id="receiptTemplate">
                 <div class="item" row="<%- receipt_id %>">
+                <p class="trial"><%- Total %></p>
                 <div id="editNav" class="">
 
                   <button type="button" class="btn btn-default glyphicon glyphicon-collapse-up receiptModalButton" style="float: right; font-size: 20px" row="<%- receipt_id %>"></button>
@@ -39,7 +43,8 @@
               
                   <div class="item-content" style="padding-top: 0px">
                     <div class="description">
-                      <h3><%- Merchant %></h3>
+                      <h3 class="merchant"><%- Merchant %></h3>
+                      <p class="total"><%- Total %></p>
                       <ul>  
                         <% _.each(Items, function(item) { %>
                             <li><%- item.title %> , <%- item.price %></li>
@@ -49,11 +54,12 @@
 
                     <div class="meta">
                       <span>
-                        <i class="glyphicon glyphicon-calendar"><%- timestamp %></i>
+                        <i class="glyphicon glyphicon-calendar date"><%- timestamp %></i>
                         <i class="glyphicon glyphicon-user">Baruch</i>
                         <a href=""></a>
                         <br>
                         <i class="glyphicon glyphicon-tag">stuff</i>
+                        <i class="glyphicon glyphicon-tag cardType"><%- cardType %></i>
 
 
                       </span>
@@ -77,6 +83,7 @@
     <script src="js/packery.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
     <script src="js/move_receipts.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
 
 include "receipt_modal.html"
 

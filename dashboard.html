@@ -141,9 +141,21 @@
                   </div>
                 </div>
 
+
+        <h2>Sort</h2>
+        <div id="sorts" class="button-group">  
+            <button class="button is-checked" data-sort-by="original-order">Date</button>
+          <button class="button" data-sort-by="merchant">Merchant</button>
+          <button class="button" data-sort-by="cardType">Card Type</button>
+          <button class="button" data-sort-by="total">Total Price</button>
+          <button class="button" data-sort-by="trial">Trial</button>
+        </div>
+
+
         <div class="container" id="receiptContainer">
             <script type="text/template" id="receiptTemplate">
                 <div class="item" row="<%- receipt_id %>">
+                <p class="trial"><%- Total %></p>
                 <div id="editNav" class="">
 
                   <button type="button" class="btn btn-default glyphicon glyphicon-collapse-up receiptModalButton" style="float: right; font-size: 20px" row="<%- receipt_id %>"></button>
@@ -151,7 +163,8 @@
               
                   <div class="item-content" style="padding-top: 0px">
                     <div class="description">
-                      <h3><%- Merchant %></h3>
+                      <h3 class="merchant"><%- Merchant %></h3>
+                      <p class="total"><%- Total %></p>
                       <ul>  
                         <% _.each(Items, function(item) { %>
                             <li><%- item.title %> , <%- item.price %></li>
@@ -161,11 +174,12 @@
 
                     <div class="meta">
                       <span>
-                        <i class="glyphicon glyphicon-calendar"><%- timestamp %></i>
+                        <i class="glyphicon glyphicon-calendar date"><%- timestamp %></i>
                         <i class="glyphicon glyphicon-user">Baruch</i>
                         <a href=""></a>
                         <br>
                         <i class="glyphicon glyphicon-tag">stuff</i>
+                        <i class="glyphicon glyphicon-tag cardType"><%- cardType %></i>
 
 
                       </span>
@@ -189,6 +203,7 @@
     <script src="js/packery.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
     <script src="js/move_receipts.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
 
 <!-- Modal -->
 <div class="modal fade" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
