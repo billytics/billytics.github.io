@@ -142,7 +142,7 @@
                       <h3 class="merchant"><%- Merchant %></h3>
                       <ul>  
                         <% _.each(Items, function(item) { %>
-                            <li><%- item.title %> , $<%- item.price %></li>
+                            <div id="itemized_pin"><span style=""><%- item.title %>:</span> <span style="float:right"> $<%- item.price %></span></div>
                         <% }) %>
                       </ul>
                         Total Price: &#36;<p class="total" style="display: inline"><%- Total %></p>

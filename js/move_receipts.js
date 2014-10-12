@@ -119,9 +119,9 @@ function modalReceipt(data) {
         $(object.Items).each(function() {
             $('#receiptModal .modal-body #itemized').append("1 "+this.title+":    "+'<span style="float:right; padding-right:10px">&#36; '+this.price+"</span><br>");
         })
-        $('#receiptModal .modal-body #subtotal').html('<span style="margin-left:-10px;">Subtotal:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Subtotal+"</span><br>");
-        $('#receiptModal .modal-body #tax').html('<span style="margin-left:-10px">Tax:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Tax+"</span><br>");
-        $('#receiptModal .modal-body #total').html('<span style="margin-left:-10px">Total:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Total+"</span><br>");
+        $('#receiptModal .modal-body #subtotal').html('<span style="margin-left:-4px;">Subtotal:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Subtotal+"</span><br>");
+        $('#receiptModal .modal-body #tax').html('<span style="margin-left:-4px">Tax:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Tax+"</span><br>");
+        $('#receiptModal .modal-body #total').html('<span style="margin-left:-4px">Total:</span>'+'<span style="float:right; padding-right: 10px">&#36; '+object.Total+"</span><br>");
 
         $('#receiptModal').modal('show');
     })
