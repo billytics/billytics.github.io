@@ -75,7 +75,7 @@ function packery() {
 
 
 function modalReceipt(data) {
-    $('.receiptModalButton').on('click',function() {
+    $('.element-item').on('click',function() {
         // $('#receiptModal .modal-title').html('');
         // $('#receiptModal .modal-title').
         var id = $(this).attr('row');
