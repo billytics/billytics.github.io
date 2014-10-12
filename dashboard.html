@@ -158,17 +158,14 @@
                   <div class="item-content" style="padding-top: 0px">
                     <div class="description">
                       <h3 class="merchant"><%- Merchant %></h3>
-                      <ul>  
                         <% _.each(Items, function(item) { %>
                             <div id="itemized_pin"><span style=""><%- item.title %>:</span> <span style="float:right"> $<%- twoDigit(item.price) %></span></div>
                         <% }) %>
-                      </ul>
-                        Total Price: &#36;<p class="total" style="display: inline"><%- twoDigit(Total) %></p>
+                        Total Price: <p class="total" style="float:right;display: inline;"><%- twoDigit(Total) %></p>
 
                     </div>
 
                     <div class="meta">
-                      <span>
                         <i class="glyphicon glyphicon-calendar"></i> <span class="date"><%- timestamp %></span>
                         <br>
                         <i class="glyphicon glyphicon-user"></i> Baruch
@@ -177,7 +174,6 @@
                         <i class="glyphicon glyphicon glyphicon-credit-card "></i> <span class="cardType"> <%- cardType %></span>
 
 
-                      </span>
                     </div>
                   </div>
               </div>
