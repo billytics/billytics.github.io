@@ -43,7 +43,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">
-                        <li><a href="">Home</a></li>
+                        <li><a href="dashboard.html">Home</a></li>
                         <li><a href="">Analytics</a></li>
                         <li><a href="">Sell My Data</a></li>
         <!--                 {% if user.is_authenticated %}
@@ -95,7 +95,7 @@
                               <ul class="dropdown-menu">
                                 <!-- Button trigger modal -->
                                 <li><a href="account.html">My account</a></li>
-                                <li><a href="settings.html">Settings</a></li>
+                                <li><a href="">Settings</a></li>
                                 <li><a href="index.html">Sign out</a></li>
                               </ul>
                             </li>
@@ -122,68 +122,38 @@
                     </div><!--/.navbar-collapse -->
                   </div>
                 </div>
+                <!-- End navbar -->
+<div class="container">
+        
+        <table class="table table-striped">
+        </table>
 
-        <div class="container" id="receiptContainer">
-            <div id="sorts" class="btn-group">  
-        <button class="btn btn-default active" data-sort-by="original-order">Date</button>
-          <button class="btn btn-default" data-sort-by="merchant">Merchant</button>
-          <button class="btn btn-default" data-sort-by="total">Price</button>
-          <button class="btn btn-default" data-sort-by="cardType">Card Type</button>
-        </div>
-        <button id="receiptSortType" class="btn btn-primary" style="float:right; margin-right:40px"><span class="glyphicon glyphicon-chevron-up">Ascending Order</span></button>
-        <button href="javascript:;" onclick="recommendations()" id="recommendationButton" class="btn btn-warning" style="float:right; margin-right:40px"><span class="glyphicon glyphicon glyphicon-th-list">Recommendations</span></button>
-        <div id="recommendations" class="row" style="display:">
-          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <strong>Have only 2 coffees today instead of 3!</strong> Save about $110 per month
-          </div>
-          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <strong>Try to cut down on frozen foods from Fairways.</strong><br>You could save $35 per week on fresh produce.
-          </div>
-          <div class="alert alert-warning alert-dismissible col-md-4" role="alert">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <strong>Warning!</strong> Better check yourself, you're not looking too good.
-          </div>
-        </div>
-
-            <div id="items" class="isotope" style="clear: both" row="">
-            <script type="text/template" id="receiptTemplate">
-                <div class="element-item" row="<%- receipt_id %>">
-                <div class="editNav">
-                  <div class="border"></div>
-                  <div class="inner"></div>
-                </div>
-              
-                  <div class="item-content" style="padding-top: 0px">
-                    <div class="description">
-                      <h3 class="merchant"><%- Merchant %></h3>
-                      <ul>  
-                        <% _.each(Items, function(item) { %>
-                            <div id="itemized_pin"><span style=""><%- item.title %>:</span> <span style="float:right"> $<%- item.price %></span></div>
-                        <% }) %>
-                      </ul>
-                        Total Price: &#36;<p class="total" style="display: inline"><%- Total %></p>
-
-                    </div>
-
-                    <div class="meta">
-                      <span>
-                        <i class="glyphicon glyphicon-calendar date"><%- timestamp %></i>
-                        <i class="glyphicon glyphicon-user">Baruch</i>
-                        <a href=""></a>
-                        <br>
-                        <i class="glyphicon glyphicon-tag"><%- tag %></i>
-                        <i class="glyphicon glyphicon-tag cardType"><%- cardType %></i>
-
-
-                      </span>
-                    </div>
-                  </div>
-              </div>
-            </script>
+<form action="" method="post" enctype="multipart/form-data">
+   
+          <div class="form-group" >
+            <label class="control-label" for="id_corks">Corks</label>
+            <div class=" ">
+              <select multiple="multiple" class="form-control" id="id_corks" name="corks">
+                <option value=""  SELECTED></option>
+              </select>      
             </div>
-        </div>
+          </div>
+
+          <!-- Add the reference stuff here! -->
+          <label class="control-label" for="references">References</label>
+          <div>
+            <div class="form-group">
+
+              <textarea type="text" cols="40" rows="1" class="form-control" id="id_references" name="description" placeholder="Reference"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="url" class="form-control"  id="id_reference_link" name="link" maxlength="200" placeholder="Link to Reference" value=""/>
+            </div>
+          </div>
+          <button type="button" class="btn btn-default" id="add_reference">Add Reference</button>
+</form>
+
+</div>
     </div>
 
 
@@ -201,38 +171,7 @@
     <script src="js/move_receipts.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
 
-<!-- Receipt Modal -->
-<div class="modal fade bs-example-modal-sm" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <div id="fakeReceipt">
-          <div id="merchant">
-          </div>
-          <div id="address">
-          </div>
-          <div id="date">
-          </div>
-          <div id="itemized">
-          </div>
-          <div id="subtotal">
-          </div>
-          <div id="tax">
-          </div>
-          <div id="total">
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 </body>
 
