@@ -14,6 +14,17 @@
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     <link href="css/theme-responsive.css" rel="stylesheet" type="text/css">
      <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                 <script src="js/dist/jquery.jqplot.js"></script>
+      <script type="text/javascript" src="js/dist/plugins/jqplot.canvasTextRenderer.min.js"></script>
+        <script type="text/javascript" src="js/dist/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+    <script src="js/jquery.ajax.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>
+    <script src="js/packery.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,7 +102,7 @@
         <!--                     {% else %}
          -->                    
                             <li class="dropdown navbar-right">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- {{ user.username }} -->Username <b class="caret"></b></a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- {{ user.username }} -->Baruch <b class="caret"></b></a>
                               <ul class="dropdown-menu">
                                 <!-- Button trigger modal -->
                                 <li><a href="account.html">My account</a></li>
@@ -123,35 +134,82 @@
                   </div>
                 </div>
                 <!-- End navbar -->
+                <br><br>
 <div class="container">
         
+    
+
         <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Credit Card</th>
+              <th>Card Number</th>
+              <th>Receipt Data</th>
+              <th>Receivables</th>
+              <th>Sell It!</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mastercard</td>
+              <td>4280-XXXX-XXXX</td>
+              <td>100 MB</td>
+              <td>&#36; 30.39</td>
+              <td><button type="button" class="btn btn-alert">Sell It!</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>AMEX</td>
+              <td>5144-XXXX-XXXX</td>
+              <td>24 MB</td>
+              <td>&#36; 5.03</td>
+              <td><button type="button" class="btn btn-alert">Sell It!</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>VISA</td>
+              <td>6789-XXXX-XXXX</td>
+              <td>1 KB</td>
+              <td>&#36; 0.09</td>
+              <td><button type="button" class="btn btn-alert">Sell It!</button></td>
+            </tr>
+          </tbody>
         </table>
 
-<form action="" method="post" enctype="multipart/form-data">
-   
-          <div class="form-group" >
-            <label class="control-label" for="id_corks">Corks</label>
-            <div class=" ">
-              <select multiple="multiple" class="form-control" id="id_corks" name="corks">
-                <option value=""  SELECTED></option>
-              </select>      
-            </div>
-          </div>
+<div id="chart2" style="height: 300px; width: 500px; position: relative;" class="jqplot-target"></div>
 
-          <!-- Add the reference stuff here! -->
-          <label class="control-label" for="references">References</label>
-          <div>
-            <div class="form-group">
-
-              <textarea type="text" cols="40" rows="1" class="form-control" id="id_references" name="description" placeholder="Reference"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="url" class="form-control"  id="id_reference_link" name="link" maxlength="200" placeholder="Link to Reference" value=""/>
-            </div>
-          </div>
-          <button type="button" class="btn btn-default" id="add_reference">Add Reference</button>
-</form>
+<script>
+$(document).ready(function(){
+  var plot2 = $.jqplot ('chart2', [[-10,-8,-7,30,31,31,31,33,35]], {
+      // Give the plot a title.
+      title: 'Billytics Returns',
+      // You can specify options for all axes on the plot at once with
+      // the axesDefaults object.  Here, we're using a canvas renderer
+      // to draw the axis label which allows rotated text.
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+      // An axes object holds options for all axes.
+      // Allowable axes are xaxis, x2axis, yaxis, y2axis, y3axis, ...
+      // Up to 9 y axes are supported.
+      axes: {
+        // options for each axis are specified in seperate option objects.
+        xaxis: {
+          label: "Time",
+          // Turn off "padding".  This will allow data point to lie on the
+          // edges of the grid.  Default padding is 1.2 and will keep all
+          // points inside the bounds of the grid.
+          pad: 0
+        },
+        yaxis: {
+          label: "Dollars (USD)"
+        }
+      }
+    });
+});
+</script>
 
 </div>
     </div>
@@ -160,16 +218,8 @@
 
 
     <!-- HOME --> 
-    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.js"></script>
-    <script src="js/jquery.ajax.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.masonry.min.js"></script>
-    <script src="js/packery.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
-    <script src="js/move_receipts.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
+
+
 
 
 
