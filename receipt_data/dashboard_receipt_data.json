@@ -4,24 +4,24 @@
         "timestamp": "Oct.10,2014 10:39a.m.",
         "cardNum": "XXXX-XXXX-XXXX",
         "cardType": "VISA",
-        "Merchant": "ass",
-        "Address": "555 W. 42nd St",
+        "Merchant": "Target",
+        "Address": "524 E. 15th St",
         "City": "NY",
         "State": "NY",
         "zip": "11377",
         "tag": "groceries",
         "Items": [{
-                "title": "milk",
-                "price": 3.05
+                "title": "Dior Dress",
+                "price": 15
             },
             {
-                "title": "cheese",
+                "title": "Gucci Pants",
                 "price": 3
 
             }],
-        "Subtotal": 6.05,
-        "Tax": 1,
-        "Total": 7.10
+        "Subtotal": 18,
+        "Tax": 2,
+        "Total": 20
     },
     {
         "receipt_id": 2,
