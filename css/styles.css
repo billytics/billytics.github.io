@@ -71,7 +71,7 @@ a.list-group-item.active,[class*='-info'] {
 #stuff1 {
   background: #79BD8F url('../image/something.jpg') repeat;
   background-size: 100%;
-  height: 400px;
+  min-height: 450px;
   color: white;
 }
 
